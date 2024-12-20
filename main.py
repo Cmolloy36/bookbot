@@ -5,7 +5,7 @@ lowercase_letters = string.ascii_lowercase
 def main():
 
     # call from bookbot directory in ubuntu
-    pth = './books/frankenstein.txt'
+    pth = input('Please input the relative path to your text: ') or './books/woman.txt'
 
     with open(pth) as f:
         file_contents = f.read()
@@ -30,7 +30,7 @@ def main():
 
 
     #report section
-    print(f'{count_words(file_contents)} were found in the document \n')
+    print(f'{count_words(file_contents)} words were found in the document \n')
     char_dict = count_chars(file_contents)
     sorted_dict = dict(sorted(char_dict.items(), key=lambda item: item[1]))
     for key in reversed(sorted_dict.keys()):
