@@ -5,7 +5,7 @@ lowercase_letters = string.ascii_lowercase
 def main():
 
     # call from bookbot directory in ubuntu
-    pth = input('Please input the relative path to your text: ') or './books/woman.txt'
+    pth = input('Please input the relative path to your text: ') or './books/frankenstein.txt'
 
     with open(pth) as f:
         file_contents = f.read()
